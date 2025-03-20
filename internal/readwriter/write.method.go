@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"io"
 
-	errs "github.com/njones/socketio/internal/errors"
+	errs "github.com/928799934/socketio/internal/errors"
 )
 
 func (wtr *Writer) Bytes(p []byte) wtrErr {

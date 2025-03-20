@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eiot "github.com/njones/socketio/engineio/transport"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eiot "github.com/928799934/socketio/engineio/transport"
 )
 
 const Version4 EIOVersionStr = "4"
@@ -99,9 +99,9 @@ func (v4 *serverV4) serveTransport(w http.ResponseWriter, r *http.Request) (tran
 	}
 
 	upgrade := v4.doUpgrade(v4.sessions.Get(sessionID))(w, r)
-	if err != nil {
-		return nil, err
-	}
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	var opts []eiot.Option
 	if upgrade.upgradeFn != nil {

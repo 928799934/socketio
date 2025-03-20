@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	eiot "github.com/njones/socketio/engineio/transport"
+	eiot "github.com/928799934/socketio/engineio/transport"
 )
 
 func init() {

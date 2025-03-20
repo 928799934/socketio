@@ -6,10 +6,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	call "github.com/njones/socketio/callback"
-	siop "github.com/njones/socketio/protocol"
-	seri "github.com/njones/socketio/serialize"
-	siot "github.com/njones/socketio/transport"
+	call "github.com/928799934/socketio/callback"
+	siop "github.com/928799934/socketio/protocol"
+	seri "github.com/928799934/socketio/serialize"
+	siot "github.com/928799934/socketio/transport"
 )
 
 const serverEvent = "...*..."
@@ -253,6 +253,10 @@ func (v1 inSocketV1) emit(event Event, data ...Data) error {
 	}
 
 	return nil
+}
+
+func (v1 inSocketV1) Disconnect() {
+	v1.tr().Shutdown(v1._socketID)
 }
 
 // SocketV1 is the returned socket

@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	eios "github.com/njones/socketio/engineio/session"
-	seri "github.com/njones/socketio/serialize"
-	sios "github.com/njones/socketio/session"
-	siot "github.com/njones/socketio/transport"
+	eios "github.com/928799934/socketio/engineio/session"
+	seri "github.com/928799934/socketio/serialize"
+	sios "github.com/928799934/socketio/session"
+	siot "github.com/928799934/socketio/transport"
 )
 
 const (

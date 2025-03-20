@@ -6,10 +6,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	eiot "github.com/njones/socketio/engineio/transport"
-	siop "github.com/njones/socketio/protocol"
-	sios "github.com/njones/socketio/session"
-	siot "github.com/njones/socketio/transport"
+	eiot "github.com/928799934/socketio/engineio/transport"
+	siop "github.com/928799934/socketio/protocol"
+	sios "github.com/928799934/socketio/session"
+	siot "github.com/928799934/socketio/transport"
 )
 
 type (
@@ -201,4 +201,30 @@ FindingRoomNames:
 		}
 	}
 	return siot.RoomArray{Rooms: names}
+}
+
+func (tr *inMemoryTransport) Shutdown(socketID SocketID) {
+	tr.ṡ.Lock()
+	if _, ok := tr.s[socketID]; ok {
+		tr.s[socketID].Shutdown()
+	}
+	tr.ṡ.Unlock()
+
+	tr.ṁ.Lock()
+	for sessionID, _socketID := range tr.m {
+		if _socketID == socketID {
+			delete(tr.m, sessionID)
+		}
+	}
+	tr.ṁ.Unlock()
+
+	tr.ṙ.Lock()
+	for ns, sockets := range tr.r {
+		for sID := range sockets {
+			if sID == socketID {
+				delete(tr.r, ns)
+			}
+		}
+	}
+	tr.ṙ.Unlock()
 }

@@ -6,7 +6,7 @@ package protocol
 import (
 	"io"
 
-	rw "github.com/njones/socketio/internal/readwriter"
+	rw "github.com/928799934/socketio/internal/readwriter"
 )
 
 type PayloadV4 []PacketV4

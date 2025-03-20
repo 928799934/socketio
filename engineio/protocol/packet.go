@@ -3,7 +3,7 @@ package protocol
 import (
 	"io"
 
-	"github.com/njones/socketio/internal/readwriter"
+	"github.com/928799934/socketio/internal/readwriter"
 )
 
 const (

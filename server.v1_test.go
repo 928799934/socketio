@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/njones/socketio"
-	"github.com/njones/socketio/callback"
-	"github.com/njones/socketio/engineio"
-	"github.com/njones/socketio/serialize"
-	"github.com/njones/socketio/session"
+	"github.com/928799934/socketio"
+	"github.com/928799934/socketio/callback"
+	"github.com/928799934/socketio/engineio"
+	"github.com/928799934/socketio/serialize"
+	"github.com/928799934/socketio/session"
 	"github.com/stretchr/testify/assert"
 )
 

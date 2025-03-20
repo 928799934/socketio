@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	itst "github.com/njones/socketio/internal/test"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	itst "github.com/928799934/socketio/internal/test"
 	"github.com/stretchr/testify/assert"
 )
 

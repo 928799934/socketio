@@ -1,6 +1,6 @@
 package protocol
 
-import erro "github.com/njones/socketio/internal/errors"
+import erro "github.com/928799934/socketio/internal/errors"
 
 const ver = "version"
 

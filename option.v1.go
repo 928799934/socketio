@@ -3,7 +3,7 @@ package socketio
 import (
 	"strings"
 
-	eio "github.com/njones/socketio/engineio"
+	eio "github.com/928799934/socketio/engineio"
 )
 
 // WithPath changes the path when using the SocketIO engine in

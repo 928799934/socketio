@@ -1,4 +1,4 @@
-# SocketIO [![GoDoc](https://pkg.go.dev/badge/github.com/njones/socketio?utm_source=godoc)](https://pkg.go.dev/github.com/njones/socketio) 
+# SocketIO [![GoDoc](https://pkg.go.dev/badge/github.com/928799934/socketio?utm_source=godoc)](https://pkg.go.dev/github.com/928799934/socketio) 
 
 This Go language SocketIO library aims to support all past, current and future versions of the Socket.io (and Engine.io) protocols and servers.
 
@@ -27,7 +27,7 @@ This library is very new and **we're looking for beta testers.**
 ## Install
 
 ```bash
-go get github.com/njones/socketio
+go get github.com/928799934/socketio
 ```
 
 ## Example
@@ -40,10 +40,10 @@ import (
 	"net/http"
 	"time"
 
-	sio "github.com/njones/socketio"
-	eio "github.com/njones/socketio/engineio"
-	eiot "github.com/njones/socketio/engineio/transport"
-	ser "github.com/njones/socketio/serialize"
+	sio "github.com/928799934/socketio"
+	eio "github.com/928799934/socketio/engineio"
+	eiot "github.com/928799934/socketio/engineio/transport"
+	ser "github.com/928799934/socketio/serialize"
 )
 
 func main() {
@@ -83,10 +83,10 @@ import (
 	"net/http"
 	"time"
 
-	sio "github.com/njones/socketio"
-	eio "github.com/njones/socketio/engineio"
-	eiot "github.com/njones/socketio/engineio/transport"
-	ser "github.com/njones/socketio/serialize"
+	sio "github.com/928799934/socketio"
+	eio "github.com/928799934/socketio/engineio"
+	eiot "github.com/928799934/socketio/engineio/transport"
+	ser "github.com/928799934/socketio/serialize"
 )
 
 // Define a custom wrapper 

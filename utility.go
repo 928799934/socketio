@@ -3,7 +3,7 @@ package socketio
 import (
 	"io"
 
-	seri "github.com/njones/socketio/serialize"
+	seri "github.com/928799934/socketio/serialize"
 )
 
 func ampersand(s string) *string { return &s }

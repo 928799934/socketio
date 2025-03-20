@@ -3,9 +3,9 @@ package socketio
 import (
 	"net/http"
 
-	nmem "github.com/njones/socketio/adaptor/transport/memory"
-	eio "github.com/njones/socketio/engineio"
-	siop "github.com/njones/socketio/protocol"
+	nmem "github.com/928799934/socketio/adaptor/transport/memory"
+	eio "github.com/928799934/socketio/engineio"
+	siop "github.com/928799934/socketio/protocol"
 )
 
 // https://socket.io/docs/v4/migrating-from-3-x-to-4-0/

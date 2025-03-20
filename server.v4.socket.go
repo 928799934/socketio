@@ -4,8 +4,8 @@ import (
 	"strings"
 	"time"
 
-	seri "github.com/njones/socketio/serialize"
-	siot "github.com/njones/socketio/transport"
+	seri "github.com/928799934/socketio/serialize"
+	siot "github.com/928799934/socketio/transport"
 )
 
 var v4ProtectedEventName = map[Event]struct{}{
@@ -150,6 +150,10 @@ func (v4 inSocketV4) Emit(event Event, data ...Data) error {
 	return v1.emit(event, data...)
 }
 
+func (v4 inSocketV4) Disconnect() {
+	v4.prev.Disconnect()
+}
+
 type onConnectCallbackVersion4 = func(*SocketV4) error
 
 type SocketV4 struct {
@@ -179,3 +183,7 @@ func (v4 *SocketV4) Broadcast() emit                { v4.setIsSender(true); retu
 func (v4 *SocketV4) Volatile() emit                 { return v4 } // NOT IMPLEMENTED...
 func (v4 *SocketV4) Compress(compress bool) emit    { return v4 } // NOT IMPLEMENTED...
 func (v4 *SocketV4) Timeout(dur time.Duration) emit { return v4 } // NOT IMPLEMENTED...
+
+// func (v4 *SocketV4) Disconnect() {
+// 	v4.prev.Disconnect()
+// }

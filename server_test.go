@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/njones/socketio"
-	eio "github.com/njones/socketio/engineio"
-	itst "github.com/njones/socketio/internal/test"
+	"github.com/928799934/socketio"
+	eio "github.com/928799934/socketio/engineio"
+	itst "github.com/928799934/socketio/internal/test"
 	"github.com/stretchr/testify/assert"
 	sock "golang.org/x/net/websocket"
 )

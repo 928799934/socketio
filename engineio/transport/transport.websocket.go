@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eios "github.com/njones/socketio/engineio/session"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eios "github.com/928799934/socketio/engineio/session"
 	errg "golang.org/x/sync/errgroup"
 	ws "nhooyr.io/websocket"
 )
@@ -98,7 +98,7 @@ func (t *WebsocketTransport) Run(w http.ResponseWriter, r *http.Request, opts ..
 	return err
 }
 
-func (t *WebsocketTransport) probe(w http.ResponseWriter, r *http.Request) error {
+func (t *WebsocketTransport) probe(_ http.ResponseWriter, r *http.Request) error {
 	type Packet = eiop.Packet
 
 	ctx := r.Context()
@@ -336,6 +336,10 @@ func (t *WebsocketTransport) outgoing(r *http.Request) (err error) {
 
 		}
 	}
+}
+
+func (t *WebsocketTransport) Shutdown() {
+	t.conn.Close(ws.StatusNormalClosure, "done")
 }
 
 func WithPerMessageDeflate(kind HTTPCompressionKind) Option {

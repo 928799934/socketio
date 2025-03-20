@@ -7,7 +7,7 @@ import (
 	"io"
 	"reflect"
 
-	seri "github.com/njones/socketio/serialize"
+	seri "github.com/928799934/socketio/serialize"
 )
 
 type ErrorWrap func() error

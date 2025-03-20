@@ -3,8 +3,8 @@ package transport
 import (
 	"net/http"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eios "github.com/njones/socketio/engineio/session"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eios "github.com/928799934/socketio/engineio/session"
 )
 
 type SessionID = eios.ID

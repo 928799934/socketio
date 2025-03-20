@@ -1,7 +1,7 @@
 package serialize
 
 import (
-	erro "github.com/njones/socketio/internal/errors"
+	erro "github.com/928799934/socketio/internal/errors"
 )
 
 const (

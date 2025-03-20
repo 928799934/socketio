@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eios "github.com/njones/socketio/engineio/session"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eios "github.com/928799934/socketio/engineio/session"
 	"golang.org/x/text/transform"
 )
 
@@ -181,7 +181,7 @@ Write:
 }
 
 // gather pulls in all of the posts
-func (t *PollingTransport) emit(w http.ResponseWriter, r *http.Request) error {
+func (t *PollingTransport) emit(_ http.ResponseWriter, r *http.Request) error {
 
 	var payload eiop.Payload
 	if err := t.codec.PayloadDecoder.From(r.Body).ReadPayload(&payload); err != nil {

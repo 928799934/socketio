@@ -3,7 +3,7 @@ package transport
 import (
 	"time"
 
-	with "github.com/njones/socketio/internal/option"
+	with "github.com/928799934/socketio/internal/option"
 )
 
 type Option = with.Option

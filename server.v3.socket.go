@@ -3,7 +3,7 @@ package socketio
 import (
 	"strings"
 
-	siot "github.com/njones/socketio/transport"
+	siot "github.com/928799934/socketio/transport"
 )
 
 var v3ProtectedEventName = map[Event]struct{}{
@@ -69,6 +69,10 @@ func (v3 inSocketV3) To(room Room) inToEmit {
 // Emit - sending to all connected clients
 func (v3 inSocketV3) Emit(event Event, data ...Data) error {
 	return v3.prev.Emit(event, data...)
+}
+
+func (v3 inSocketV3) Disconnect() {
+	v3.prev.Disconnect()
 }
 
 type onConnectCallbackVersion3 = func(*SocketV3) error

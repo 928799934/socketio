@@ -1,6 +1,6 @@
 package transport
 
-import eiot "github.com/njones/socketio/engineio/transport"
+import eiot "github.com/928799934/socketio/engineio/transport"
 
 type packet interface {
 	GetType() byte
@@ -13,6 +13,7 @@ type Transporter interface {
 	AddSetter
 	JoinLeaver
 	SendReceiver
+	Closer
 
 	AckID() uint64
 }
@@ -41,4 +42,8 @@ type Emitter interface {
 
 	Sockets(ns Namespace) SocketArray
 	Rooms(ns Namespace, id SocketID) RoomArray
+}
+
+type Closer interface {
+	Shutdown(socketID SocketID)
 }

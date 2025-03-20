@@ -4,11 +4,11 @@ import (
 	"io"
 	"strings"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eios "github.com/njones/socketio/engineio/session"
-	eiot "github.com/njones/socketio/engineio/transport"
-	siop "github.com/njones/socketio/protocol"
-	sios "github.com/njones/socketio/session"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eios "github.com/928799934/socketio/engineio/session"
+	eiot "github.com/928799934/socketio/engineio/transport"
+	siop "github.com/928799934/socketio/protocol"
+	sios "github.com/928799934/socketio/session"
 )
 
 type (
@@ -162,4 +162,8 @@ func (t *Transport) Receive() <-chan Socket {
 		}
 	}()
 	return t.receive
+}
+
+func (t *Transport) Shutdown() {
+	t.eioTransport.Shutdown()
 }

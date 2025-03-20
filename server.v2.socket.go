@@ -3,7 +3,7 @@ package socketio
 import (
 	"strings"
 
-	siot "github.com/njones/socketio/transport"
+	siot "github.com/928799934/socketio/transport"
 )
 
 type inSocketV2 struct {
@@ -55,6 +55,10 @@ func (v2 inSocketV2) To(room Room) inToEmit { return v2.In(room) }
 
 func (v2 inSocketV2) Emit(event Event, data ...Data) error {
 	return v2.prev.Emit(event, data...)
+}
+
+func (v2 inSocketV2) Disconnect() {
+	v2.prev.Disconnect()
 }
 
 type onConnectCallbackVersion2 = func(*SocketV2) error

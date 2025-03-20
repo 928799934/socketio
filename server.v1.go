@@ -7,11 +7,11 @@ import (
 	"strings"
 	"sync"
 
-	nmem "github.com/njones/socketio/adaptor/transport/memory"
-	eio "github.com/njones/socketio/engineio"
-	erro "github.com/njones/socketio/internal/errors"
-	siop "github.com/njones/socketio/protocol"
-	siot "github.com/njones/socketio/transport"
+	nmem "github.com/928799934/socketio/adaptor/transport/memory"
+	eio "github.com/928799934/socketio/engineio"
+	erro "github.com/928799934/socketio/internal/errors"
+	siop "github.com/928799934/socketio/protocol"
+	siot "github.com/928799934/socketio/transport"
 )
 
 // The 3rd revision (included in socket.io@1.0.0...1.0.2) can be found here: https://github.com/socketio/socket.io-protocol/tree/v3
@@ -57,7 +57,7 @@ func NewServerV1(opts ...Option) *ServerV1 {
 // when setting up a new server, as it sets up the defaults. The defaults can
 // be over written by the Options. Note that the Options can also include options
 // that can be applied to the underlining engineIO server.
-func (v1 *ServerV1) new(opts ...Option) Server {
+func (v1 *ServerV1) new(_ ...Option) Server {
 	v1.run = runV1(v1)
 	v1.doConnectPacket = doConnectPacket(v1)
 	v1.doDisconnectPacket = doDisconnectPacket(v1)

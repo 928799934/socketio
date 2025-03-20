@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	siop "github.com/njones/socketio/protocol"
-	siot "github.com/njones/socketio/transport"
+	siop "github.com/928799934/socketio/protocol"
+	siot "github.com/928799934/socketio/transport"
 )
 
 func doConnectPacketV4(v4 *ServerV4) func(SocketID, siot.Socket, *Request) error {

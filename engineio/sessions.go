@@ -6,8 +6,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	eios "github.com/njones/socketio/engineio/session"
-	eiot "github.com/njones/socketio/engineio/transport"
+	eios "github.com/928799934/socketio/engineio/session"
+	eiot "github.com/928799934/socketio/engineio/transport"
 )
 
 func loadDuration(addr *time.Duration) time.Duration {
@@ -190,7 +190,7 @@ func (c *lifecycle) WithTimeout(ctx context.Context, d time.Duration) context.Co
 	return context.WithValue(x, eios.SessionTimeoutKey, timeout)
 }
 
-func (c *lifecycle) setTimeout(sessionID SessionID, start time.Time) {
+func (c *lifecycle) setTimeout(sessionID SessionID, _ time.Time) {
 	go func() {
 		val, _ := c.t.Load(sessionID)
 		<-val.(*time.Timer).C

@@ -18,9 +18,9 @@ import (
 	"strings"
 	"time"
 
-	eiop "github.com/njones/socketio/engineio/protocol"
-	eios "github.com/njones/socketio/engineio/session"
-	eiot "github.com/njones/socketio/engineio/transport"
+	eiop "github.com/928799934/socketio/engineio/protocol"
+	eios "github.com/928799934/socketio/engineio/session"
+	eiot "github.com/928799934/socketio/engineio/transport"
 )
 
 const Version2 EIOVersionStr = "2"
@@ -72,7 +72,7 @@ func NewServerV2(opts ...Option) Server {
 	return v2
 }
 
-func (v2 *serverV2) new(opts ...Option) *serverV2 {
+func (v2 *serverV2) new(_ ...Option) *serverV2 {
 	v2.path = amp("/engine.io")
 	v2.allowUpgrades = true
 	v2.pingTimeout = 60000 * time.Millisecond
