@@ -1,4 +1,4 @@
-# SocketIO [![GoDoc](https://pkg.go.dev/badge/github.com/928799934/socketio?utm_source=godoc)](https://pkg.go.dev/github.com/928799934/socketio) 
+# SocketIO [![GoDoc](https://pkg.go.dev/badge/github.com/njones/socketio?utm_source=godoc)](https://pkg.go.dev/github.com/njones/socketio) 
 
 This Go language SocketIO library aims to support all past, current and future versions of the Socket.io (and Engine.io) protocols and servers.
 
